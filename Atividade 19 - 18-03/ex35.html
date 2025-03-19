@@ -34,15 +34,22 @@
     <script>
         const resultado = document.querySelector(".result");
 
-        const idade = Number(prompt("Digite a sua idade: "));
+        const nota1 = Number(prompt("Nota um: "));
+        const nota2 = Number(prompt("Nota dois: "));
+        const nota3 = Number(prompt("Nota três: "));
 
-        if (idade < 18 || idade > 70)  {
-            resultado.innerHTML = `<p>Seu voto é facultativo</p>`;
+        const media = (nota1 + nota2 + nota3) / 3;
+
+        if (media >= 7) {
+            resultado.innerHTML = `
+                <p>Você foi APROVADO</p>
+            `;
         } else {
-            resultado.innerHTML = `<p>Seu voto é obrigatório</p>`;
+            resultado.innerHTML = `
+                <p>Você foi REPROVADO</p>
+            `;
         }
-
-
+    
     </script>
 </body>
 
