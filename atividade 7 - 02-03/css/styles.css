@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header,
+.header-nav,
+.main-content,
+.footer {
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background-color: black;
+}
+
+.header-nav {
+    background-color: rgb(48, 0, 223);
+
+    ul {
+        max-width: 1218px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        li {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+}
+
+.main-content {
+    display: flex;
+    text-align: center;
+    padding: 0;
+    height: 100vh;
+}
+
+.main-content .main-nav {
+    background-color: #ccc;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        & li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        li {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            text-align: left;
+        }
+    }
+}
+
+.main-content .main-nav,
+.main-content .main-aside {
+    flex: 1;
+}
+
+.main-content .main-section {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+        color: black;
+    }
+}
+
+.main-image {
+    margin-top: 40px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.main-text {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: rgb(211, 211, 255);
+    padding: 20px;
+}
+.main-container-articles {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+.main-article {
+    flex: 1;
+    height: 150px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.main-aside img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    text-align: center;
+    padding: 50px;
+    background-color: black;
+}

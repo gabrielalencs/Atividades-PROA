@@ -1,0 +1,341 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-image: url(../images/guitarra_fundo_body.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-position: top;
+}
+
+main {
+    background-color: rgba(150, 90, 90, 0.829);
+    max-width: 1218px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Header */
+
+.header {
+    background-image: url(../images/guitarras_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+    position: relative;
+    max-width: 1218px;
+    margin: 0 auto;
+
+    .header-nav {
+        position: absolute;
+        bottom: 2rem;
+        right: 5%;
+        left: 5%;
+        z-index: 5;
+        max-width: 52rem;
+
+        @media (width >=768px) {
+            max-width: 100%;
+            right: 3%;
+            left: auto;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        flex-wrap: wrap;
+
+        @media (width >=768px) {
+            padding: 2rem 3rem;
+        }
+    }
+
+    li {
+        font-size: 1.4rem;
+
+        @media (width >=768px) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+/* About */
+
+.about {
+    background-color: rgb(177, 21, 21);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1218px;
+    margin: 0 auto;
+
+    @media (width >=992px) {
+        padding: 4rem 4rem 7rem;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .about-content,
+    .about-image {
+        flex: 1;
+    }
+
+    .about-content {
+        background-color: rgb(212, 146, 146);
+        padding: 3rem;
+        color: #fff;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Instruments */
+
+.instruments {
+    max-width: 1218px;
+    margin: 2rem auto 0;
+    padding: 3rem;
+    display: grid;
+    gap: 7rem;
+    background-color: #fff;
+
+    @media (width >=480px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (width >=922px) {
+        padding: 4rem 4rem 10rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .instruments-card {
+        flex: 1;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        span {
+            margin-top: 1rem;
+            display: inline-block;
+            font-weight: 700;
+            color: red;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+/* Address */
+
+.address {
+    background-color: rgb(179, 74, 37);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1218px;
+    margin: 2rem auto 0;
+
+    @media (width >=992px) {
+        padding: 4rem 4rem 7rem;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .address-map,
+    .address-content {
+        flex: 1;
+    }
+
+    .address-map iframe {
+        width: 100%;
+    }
+
+    .address-content {
+        background-color: rgb(212, 146, 146);
+        padding: 3rem;
+        color: #fff;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+
+/* Contact */
+
+.contact {
+    max-width: 1218px;
+    margin: 2rem auto 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+    max-width: 1218px;
+    margin: 2rem auto 0;
+    align-items: center;
+    padding: 5rem 3rem;
+
+    @media (width >=992px) {
+        padding: 4rem;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .contact-form,
+    .contact-social-media {
+        flex: 1;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        max-width: 50rem;
+
+        @media (width >=992px) {
+            max-width: 100%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        label {
+            font-size: 1.6rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            height: 10rem;
+        }
+
+        button {
+            padding: 1rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    .contact-social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            font-size: 2.2rem;
+            color: darkblue;
+        }
+
+        .social-media-itens {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+
+            div {
+                flex: 1;
+            }
+
+            img {
+                width: 5rem;
+
+                @media (width >=768px) {
+                    width: 8rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 5rem;
+    text-align: center;
+    max-width: 1218px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        margin-top: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .social-media-itens {
+        margin-top: 4rem;
+        display: flex;
+        gap: 3rem;
+
+        div {
+            flex: 1;
+        }
+
+        img {
+            width: 5rem;
+        }
+    }
+}
