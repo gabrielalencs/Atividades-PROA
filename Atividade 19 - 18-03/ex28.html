@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 19 - Exercício 28</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercício 28</h1>
+    <p>
+
+        28) Faça um programa que leia o peso e a altura de uma pessoa e exiba o seu Índice de Massa Corporal (IMC) e a
+        sua classificação. Considere a tabela de classificação do IMC.
+    </p>
+
+    <div class="result"></div>
+
+    <script>
+        const resultado = document.querySelector(".result");
+
+        const peso = Number(prompt("Digite o seu peso: "));
+        const altura = Number(prompt("Digite a sua altura: "));
+
+        const imc = peso / (altura ** 2);
+
+        if (imc < 18.5) {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está abaixo do peso</p>
+            `;
+        } else if (imc < 24.9) {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está no peso normal</p>
+            `;
+        } else if (imc < 29.9) {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está com excesso de peso</p>
+            `;
+        } else if (imc < 34.9) {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está com obesidade classe I</p>
+            `;
+        } else if (imc < 39.9) {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está com obesidade classe II</p>
+            `;
+        } else {
+            resultado.innerHTML = `
+                <p>Seu IMC é ${imc.toFixed(2)} e você está com obesidade classe III</p>
+            `;
+        }
+
+    </script>
+</body>
+
+</html>
