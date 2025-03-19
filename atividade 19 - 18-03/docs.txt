@@ -1,22 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-22) Faça um programa que receba o salário de um funcionário e exiba o valor do seu bônus. Se o salário for maior que R$ 2000, o bônus é de 10%, caso contrário, é de 5%.
-
-
-23) Escreva um programa que leia o nome de um mês e exiba a quantidade de dias que ele possui. Considere apenas meses válidos.
-
-
 24) Crie um programa que leia três números inteiros e exiba-os em ordem crescente.
 
 

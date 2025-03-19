@@ -25,21 +25,61 @@
 
 <body>
     <h1>Exercício 21</h1>
-    <p>21) Crie um programa que leia a idade de um grupo de pessoas e exiba quantas são menores de idade e quantas são maiores de idade.</p>
+    <p>21) Crie um programa que leia a idade de um grupo de pessoas e exiba quantas são menores de idade e quantas são
+        maiores de idade.</p>
 
     <div class="result"></div>
 
     <script>
         const resultado = document.querySelector(".result");
 
-        const pessoa1 = Number(prompt("Idade da pessoa um: "));
-        const pessoa2 = Number(prompt("Idade da pessoa dois: "));
-        const pessoa3 = Number(prompt("Idade da pessoa três: "));
-        const pessoa4 = Number(prompt("Idade da pessoa quatro: "));
+        const pessoa1 = Number(prompt("Idade da pessoa Um: "));
+        const pessoa2 = Number(prompt("Idade da pessoa Dois: "));
+        const pessoa3 = Number(prompt("Idade da pessoa Três: "));
+        const pessoa4 = Number(prompt("Idade da pessoa Quatro: "));
 
-        resultado.innerHTML = `
-            <p></p>
-        `;
+        if (pessoa1 > 18) {
+            resultado.innerHTML += `
+                <p>Pessoa Um é maior de idade</p>
+            `;
+        } else {
+            resultado.innerHTML += `
+                <p>Pessoa Um é menor de idade</p>
+            `;
+        }
+
+        if (pessoa2 > 18) {
+            resultado.innerHTML += `
+                <p>Pessoa Dois é maior de idade</p>
+            `;
+        } else {
+            resultado.innerHTML += `
+                <p>Pessoa Dois é menor de idade</p>
+            `;
+        }
+
+        if (pessoa3 > 18) {
+            resultado.innerHTML += `
+                <p>Pessoa Três é maior de idade</p>
+            `;
+        } else {
+            resultado.innerHTML += `
+                <p>Pessoa Três é menor de idade</p>
+            `;
+        }
+
+        if (pessoa4 > 18) {
+            resultado.innerHTML += `
+                <p>Pessoa Quatro é maior de idade</p>
+            `;
+        } else {
+            resultado.innerHTML += `
+                <p>Pessoa Quatro é menor de idade</p>
+            `;
+        }
+
+
+        
     </script>
 </body>
 
