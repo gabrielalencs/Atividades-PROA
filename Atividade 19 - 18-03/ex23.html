@@ -34,11 +34,30 @@
     <script>
         const resultado = document.querySelector(".result");
 
+        const diasPorMes = {
+            janeiro: 31,
+            fevereiro: 28,
+            março: 31,
+            abril: 30,
+            maio: 31,
+            junho: 30,
+            julho: 31,
+            agosto: 31,
+            setembro: 30,
+            outubro: 31,
+            novembro: 30,
+            dezembro: 31,
+        };
 
-        resultado.innerHTML += `
-            <p>Seu salário com bônus é: ${salarioFuncionario}</p>
-        `;
+        const mesRecebido = prompt("Digite o nome de um mês: ").toLowerCase();
 
+        const diasDoMes = diasPorMes[mesRecebido];
+
+        if (diasDoMes) {
+            resultado.innerHTML = `
+                <p>${mesRecebido} tem ${diasDoMes} dias</p>
+            `;
+        }
     </script>
 </body>
 
