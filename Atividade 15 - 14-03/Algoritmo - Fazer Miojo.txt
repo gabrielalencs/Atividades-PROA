@@ -1,0 +1,44 @@
+Algoritmo para Fazer um Miojo 
+
+- Caminho até a dispensa na cozinha.
+- Abro a dispensa.
+- Pego uma panela.
+- Pego o miojo de carne.
+- Fecho a dispensa.
+- Caminho até a bancada da cozinha.
+- Coloco o miojo na bancada.
+- Caminho até a pia.
+- Abro a torneira.
+- Adiciono aproximadamente 300-500ml de água na panela.
+- Fecho a torneira.
+- Vou até o fogão ao lado da pia.
+- Coloco a panela em uma das bocas do fogão.
+- Ligo o fogão no botão respectivo a boca que eu coloquei a panela.
+- Giro o botão até o nível de fogo alto.
+- Aguardo até que a água entre em ebulição.
+- Vou até a bancada.
+- Pego o miojo.
+- Volto para o fogão.
+- Abro o pacote do miojo.
+- Tiro o temperinho e o miojo.
+- Coloco o temperinho na pia.
+- Coloco o miojo na panela com água fervida.
+- Deixo o miojo cozinhar de 5 à 10 minutos.
+- Vou até a pia.
+- Pego o temperinho.
+- Volto para o fogão.
+- Abaixo o nível do fogo do fogão
+- Coloco o temperinho.
+- Vou até o armário.
+- Abro o armário.
+- Pego um garfo.
+- Fecho o armário.
+- Volto para o fogão.
+- Uso o garfo para mexer o miojo com o temperinho.
+- Desligo o fogo do fogão.
+- Continuo mexendo para misturar.
+- Deixo o miojo crescer e esfriar um pouco de 5 à 10 minutos.
+- Pego a panela do miojo.
+- Vou para a bancada.
+- Coloco a panela em cima da bancada.
+- Amasso o miojinho 🤤.
