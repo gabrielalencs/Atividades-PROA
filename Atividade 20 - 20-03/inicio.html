@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel - Início</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Reservas
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Cadastro
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Eventos
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Buffet
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Auditório
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Postos
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Manutenção
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <script>
+        let nomeDoHotel = prompt("Qual o nome do hotel?");
+        // alert(`O nome do hotel é: ${nomeDoHotel}`);
+        alert("O nome do hotel é: " + nomeDoHotel);
+
+        let nomeDoUsuario = prompt("Qual o nome do usuário?");
+        let senhaDoUsuario = Number(prompt("Qual a senha do usuário?"));
+
+
+        if (senhaDoUsuario != 2678) {
+            alert("Senha inválida!");
+        } else {
+            alert("Bem vindo ao hotel " + nomeDoHotel + ", " + nomeDoUsuario + ". É um imenso prazer ter você por aqui!");
+        }
+
+    </script>
+</body>
+
+</html>
