@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Cadastro de Hóspedes</title>
+</head>
+
+<body>
+
+    <script>
+        const valorPadraoDiaria = Number(prompt("Qual o valor padrão da diária?"));
+        let hospedagensGratuitas = 0, hospedagensMeia = 0, valorTotalHospedagem = 0;
+
+        let entrada;
+        let index = 1;
+
+        while (true) {
+            entrada = prompt("Digite 'PARE' para parar de cadastrar usuários ou pressione Enter para continuar:").toUpperCase();
+
+            if (entrada === "PARE") {
+                break;
+            }
+
+            let nomeDoHospede = prompt(`Nome do ${index}º hóspede: `);
+            let idadeDoHospede = Number(prompt(`Idade do ${index}º hóspede: `));
+
+            if (idadeDoHospede < 6) {
+                alert(`${nomeDoHospede} cadastrada(o) com sucesso. ${nomeDoHospede} possui gratuidade`);
+                hospedagensGratuitas++;
+            } else if (idadeDoHospede > 60) {
+                alert(`${nomeDoHospede} cadastrada(o) com sucesso. ${nomeDoHospede} paga meia`);
+                hospedagensMeia++;
+                valorTotalHospedagem += valorPadraoDiaria / 2;
+            } else {
+                alert(`${nomeDoHospede} cadastrada(o) com sucesso.`);
+                valorTotalHospedagem += valorPadraoDiaria;
+            }
+
+            index++;
+        }
+        
+        alert(`O valor total das hospedagens é: R$${valorTotalHospedagem}; ${hospedagensGratuitas} gratuidade(s); ${hospedagensMeia} meia(s)`);
+
+    </script>
+</body>
+
+</html>
