@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Cadastro de Hóspedes</title>
+</head>
+<body>
+    
+    <script>
+        const valorPadraoDiaria = 69.99;
+        const quantidadeDeHospedes = Number(prompt("Qual a quantidade de Hóspedes?"));
+
+        for (let index = 1; index <= quantidadeDeHospedes; index++) {
+            
+            let nomeDoHospede = prompt(`Nome do ${index}º hóspede: `);
+            let idadeDoHospede = prompt(`Idade do ${index}º hóspede: `);
+
+            if (idadeDoHospede < 6) {
+                alert(`${nomeDoHospede} possui gratuidade`);
+            }
+
+            if (idadeDoHospede > 60) {
+                alert(`${nomeDoHospede} paga meia`);
+            }
+            
+        }
+    </script>
+</body>
+</html>
