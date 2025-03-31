@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+</head>
+
+<body>
+    <h1>
+        Preços de diárias
+    </h1>
+    <section>
+        <ul>
+            <li>
+                <a href="#">Básico | Preço (diária): R$55,50</a>
+            </li>
+            <li>
+                <a href="#">Premium | Preço (diária): R$100,00</a>
+            </li>
+            <li>
+                <a href="#">Luxo | Preço (diária): R$150,00</a>
+            </li>
+        </ul>
+    </section>
+    <script>
+        const basico = 55.50;
+        const premium = 100.00;
+        const luxo = 150.00;
+
+        let diaria = prompt("Escolha o quarto desejado: " +
+            "\n" + "Básico | Preço (diária): R$55,50" +
+            "\n" + "Premium | Preço (diária): R$100,00" +
+            "\n" + "Luxo | Preço (diária): R$150,00"
+        );
+
+        diaria = diaria ? diaria.toLowerCase().trim() : "";
+
+        if (!["basico", "premium", "luxo"].includes(diaria)) {
+            alert("Opção de quarto inválida! Recarregue a página e tente novamente.");
+            throw new Error("Opção inválida"); // Interrompe o script
+        }
+
+        let quantidade = parseInt(prompt("Quantos dias ficará hospedado? (Não ultrapassar 30 dias!)"));
+
+        if (isNaN(quantidade) || quantidade <= 0 || quantidade > 30) {
+            alert("Quantidade de dias inválida! Recarregue a página e tente novamente.");
+            throw new Error("Quantidade de dias inválida"); // Interrompe o script
+        }
+
+        alert("Você ficará hospedado " + quantidade + " dias, no quarto " + diaria);
+
+        let total;
+        switch (diaria) {
+            case "basico":
+                total = basico * quantidade;
+                break;
+            case "premium":
+                total = premium * quantidade;
+                break;
+            case "luxo":
+                total = luxo * quantidade;
+                break;
+        }
+
+        alert("O valor total da sua estadia será: R$" + total.toFixed(2).replace(".", ","));
+
+        let usuario = prompt("Por favor, nos informe seu nome:");
+
+        if (!usuario) {
+            alert("Nome inválido! Recarregue a página e tente novamente.");
+            throw new Error("Nome inválido"); 
+        }
+
+        let confirmacao = prompt("Por favor, digite S ou N para confirmar a reserva:");
+
+        if (confirmacao && confirmacao.toLowerCase().trim() === "s") {
+            alert("Sua reserva foi confirmada. Obrigado, " + usuario + "!");
+        } else if (confirmacao && confirmacao.toLowerCase().trim() === "n") {
+            alert("Sua reserva foi cancelada.");
+        } else {
+            alert("Opção inválida! Recarregue a página e tente novamente.");
+        }
+    </script>
+</body>
+
+</html>
