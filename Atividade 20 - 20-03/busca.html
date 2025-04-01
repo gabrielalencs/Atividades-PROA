@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Busca de Hóspedes</title>
+</head>
+
+<body>
+
+    <button onclick="cadastrarHospedes()">Cadastrar</button>
+    <button onclick="pesquisarHospede()">Pesquisar</button>
+    <a href="inicio.html" >Sair</a>
+
+    <script>
+        let hospedesCadastrados = [];
+
+        function cadastrarHospedes() {
+            for (let index = 0; index < 15; index++) {
+     
+                if (index > 0) {
+                    let entrada = prompt("Digite 'PARE' para parar de cadastrar usuários ou pressione Enter para continuar (o número máximo de clientes para cadastrar é 15 hóspedes.):").toUpperCase();
+
+                    if (entrada === "PARE") {
+                        break;
+                    }
+                }
+
+                let nomeDoHospede = prompt(`Nome do ${index + 1}º hóspede: `);
+                hospedesCadastrados.push(nomeDoHospede);
+            }
+        }
+
+        function pesquisarHospede() {
+            if (hospedesCadastrados.length === 0) {
+                alert("Nenhum hóspede cadastrado ainda.");
+                return;
+            }
+
+            let nomeDoHospede = prompt("Digite o nome do hóspede para verificarmos se ele está cadastrado").trim().toLowerCase();
+            let buscaHospede = hospedesCadastrados.find(hospede => hospede.toLowerCase() === nomeDoHospede);
+
+            if (buscaHospede) {
+                alert(`Hóspede ${buscaHospede} foi encontrado.`);
+            } else {
+                alert("Hóspede não encontrado.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
