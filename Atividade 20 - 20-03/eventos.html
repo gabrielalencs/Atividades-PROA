@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Eventos</title>
+</head>
+<body>
+    
+    <script>
+        const duracaoEmHoras = Number(prompt("Qual a duração do evento em horas? "));
+        const quantidadeDeGarcos = Number(prompt("Quantos garçons serão necessários? "));
+        
+        const valorTotal = (quantidadeDeGarcos * 10.50) * duracaoEmHoras;
+
+        alert(`Custo total: R$ ${valorTotal.toFixed(1)}`)
+
+        const efetuarReserva = prompt("Gostaria de efetuar a reserva? S/N ").toLowerCase();
+
+        if (efetuarReserva === "s") {
+            alert("Reserva efetuada com sucesso.");
+        } else {
+            alert("Reserva não efetuada.");
+        }
+    </script>
+</body>
+</html>
