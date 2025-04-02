@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Buffet</title>
+</head>
+
+<body>
+    <script>
+        let quantidadeConvidados = Number(prompt("Qual a quantidade de convidados? "));
+
+        if (quantidadeConvidados > 350) {
+            alert("Quantidade de convidados superior à capacidade máxima.");
+        } else {
+            let litrosCafe = quantidadeConvidados * 0.2;
+            let litrosAgua = quantidadeConvidados * 0.5;
+            let salgados = quantidadeConvidados * 7;
+
+            let valorTotalCafe = litrosCafe * 0.80;
+            let valorTotalAgua = litrosAgua * 0.40;
+            let valorTotalSalgado = Math.ceil(salgados / 100) * 34;
+
+            let valorTotalFesta = valorTotalCafe + valorTotalAgua + valorTotalSalgado;
+
+            alert(`O evento precisará de:
+                    - ${litrosCafe.toFixed(1)} litros de café
+                    - ${litrosAgua.toFixed(1)} litros de água
+                    - ${salgados} salgados
+                    O custo total do evento será de R$ ${valorTotalFesta.toFixed(2)}`
+            );
+
+            let aceitaOsValores = prompt("Gostaria de efetuar a reserva? S/N").toLowerCase();
+
+            if (aceitaOsValores === "s") {
+                let nome = prompt("Qual é o seu nome?");
+                alert(`${nome}, reserva efetuada com sucesso.`);
+            } else {
+                alert("Reserva não efetuada.");
+            }
+        }
+    </script>
+</body>
+
+</html>

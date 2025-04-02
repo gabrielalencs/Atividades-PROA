@@ -18,7 +18,8 @@
         const efetuarReserva = prompt("Gostaria de efetuar a reserva? S/N ").toLowerCase();
 
         if (efetuarReserva === "s") {
-            alert("Reserva efetuada com sucesso.");
+            let nome = prompt("Qual é o seu nome?");
+            alert(`${nome}, reserva efetuada com sucesso.`);
         } else {
             alert("Reserva não efetuada.");
         }
