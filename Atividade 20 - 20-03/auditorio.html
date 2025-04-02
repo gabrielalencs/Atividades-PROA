@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Auditório</title>
+</head>
+
+<body>
+
+    <script>
+        const auditorioLaranja = 150;
+        const capacidadeExtraLaranja = 70;
+        const auditorioColorado = 350;
+
+        const numeroDeConvidados = Number(prompt("Qual o número de convidados para o seu evento?"));
+
+        if (numeroDeConvidados > 350 || numeroDeConvidados <= 0) {
+            alert("Quantidade de convidados inválida");
+        } else {
+      
+
+            if (numeroDeConvidados > 220) {
+            
+                alert("Use o auditório Colorado")
+
+            } else {
+
+                let cadeirasAdicionais = numeroDeConvidados - auditorioLaranja;
+
+                alert(`Use o auditório Laranja${cadeirasAdicionais > 0 ? ` (inclua mais ${cadeirasAdicionais} cadeiras)` : ""}`);
+
+            }
+
+            const reserva = prompt("Gostaria de efetuar a reserva? S/N").toUpperCase();
+
+            if (reserva === "S") {
+                const nome = prompt("Informe seu nome:");
+                alert(`${nome}, reserva efetuada com sucesso.`);
+            } else {
+                alert("Reserva não efetuada.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

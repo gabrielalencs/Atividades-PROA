@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Auditório</title>
+</head>
+
+<body>
+
+    <script>
+        const diaSemana = prompt("Qual o dia do seu evento?").toLowerCase();
+        const horaEvento = Number(prompt("Qual a hora do seu evento?"));
+
+        if (
+            (["segunda", "terça", "quarta", "quinta", "sexta"].includes(diaSemana) && horaEvento >= 7 && horaEvento <= 23) ||
+            (["sábado", "domingo"].includes(diaSemana) && horaEvento >= 7 && horaEvento <= 15)
+        ) {
+            const empresa = prompt("Qual o nome da empresa?");
+
+            alert(`Restaurante reservado para ${empresa}. ${diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1)} às ${horaEvento}hs.`);
+        } else {
+            alert("Restaurante indisponível");
+
+        }
+
+    </script>
+</body>
+
+</html>
