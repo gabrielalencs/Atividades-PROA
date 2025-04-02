@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Manuntenção</title>
+</head>
+
+<body>
+
+    <script>
+        let menorValor = null;
+        let empresaMaisBarata = "";
+
+        do {
+            const nomeEmpresa = prompt("Qual o nome da empresa?");
+            const valorPorAparelho = Number(prompt("Qual o valor por aparelho?"));
+            const quantidadeAparelhos = Number(prompt("Qual a quantidade de aparelhos?"));
+            const percentualDesconto = Number(prompt("Qual a porcentagem de desconto?"));
+            const minAparelhosDesconto = Number(prompt("Qual o número mínimo de aparelhos para conseguir o desconto?"));
+
+            let valorTotal = valorPorAparelho * quantidadeAparelhos;
+
+            if (quantidadeAparelhos >= minAparelhosDesconto) {
+                valorTotal -= valorTotal * (percentualDesconto / 100);
+            }
+
+            alert(`O serviço de ${nomeEmpresa} custará R$ ${valorTotal.toFixed(2)}`);
+
+            if (menorValor === null || valorTotal < menorValor) {
+                menorValor = valorTotal;
+                empresaMaisBarata = nomeEmpresa;
+            }
+
+            var resposta = prompt("Deseja informar novos dados? (S/N)").toUpperCase();
+        } while (resposta === "S");
+
+        alert(`O orçamento de menor valor é o de ${empresaMaisBarata} por R$ ${menorValor.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | Postos</title>
+</head>
+
+<body>
+    <a href="inicio.html">Voltar para home</a>
+
+    <script>
+        const alcoolWayne = Number(prompt("Qual o valor do álcool no posto Wayne Oil?"));
+        const gasolinaWayne = Number(prompt("Qual o valor da gasolina no posto Wayne Oil?"));
+        const alcoolStark = Number(prompt("Qual o valor do álcool no posto Stark Petrol?"));
+        const gasolinaStark = Number(prompt("Qual o valor da gasolina no posto Stark Petrol?"));
+
+        const tanque = 42; 
+
+        const usaAlcoolWayne = alcoolWayne <= gasolinaWayne * 0.7;
+        const usaAlcoolStark = alcoolStark <= gasolinaStark * 0.7;
+
+        const custoWayne = usaAlcoolWayne ? alcoolWayne * tanque : gasolinaWayne * tanque;
+        const custoStark = usaAlcoolStark ? alcoolStark * tanque : gasolinaStark * tanque;
+
+        let melhorPosto, melhorCombustivel;
+
+        if (custoWayne < custoStark) {
+            melhorPosto = "Wayne Oil";
+            melhorCombustivel = usaAlcoolWayne ? "álcool" : "gasolina";
+        } else {
+            melhorPosto = "Stark Petrol";
+            melhorCombustivel = usaAlcoolStark ? "álcool" : "gasolina";
+        }
+
+        alert(`É mais barato abastecer com ${melhorCombustivel} no posto ${melhorPosto}.`);
+
+    </script>
+</body>
+
+</html>
