@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+    </p>
+
+
+    <script>
+
+        let numeroInformado = Number(prompt("Digite um valor para ver as tabuadas até esse número: "));
+
+        for (let i = 1; i <= numeroInformado; i++) {
+            document.write(`<strong>Tabuada do ${i}:</strong><br>`);
+
+            for (let j = 1; j <= 10; j++) {
+
+                document.write(`${i} x ${j} = ${i * j} <br>`);
+
+            }
+
+            document.write(`-----------<br>`);
+        }
+    </script>
+</body>
+
+</html>
