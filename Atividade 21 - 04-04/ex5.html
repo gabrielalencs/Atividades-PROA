@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário
+        e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+    </p>
+
+
+    <script>
+        let valorUm = Number(prompt("Digite o primeiro valor: "));
+        let valorDois = Number(prompt("Digite o segundo valor: "));
+
+        while (valorUm >= valorDois) {
+            valorUm = Number(prompt("Digite outro número, o primeiro valor deve ser maior que o segundo: "));
+        }
+
+        let mediaDosNumeros = (valorUm + valorDois) / 2;
+        let mediaEntreNumeros = 0;
+        let somaEntreNumeros = 0;
+        const difencaEntreNumeros = valorDois - valorUm - 1;
+
+
+        if (difencaEntreNumeros === 0) {
+
+            alert("Não há números entre os dois valores informados.");
+
+        } else {
+
+            for (let index = valorUm + 1; index < valorDois; index++) {
+                somaEntreNumeros += index;
+            }
+
+            mediaEntreNumeros = somaEntreNumeros / difencaEntreNumeros;
+            alert("Média dos números entre eles: " + mediaEntreNumeros.toFixed(1));
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

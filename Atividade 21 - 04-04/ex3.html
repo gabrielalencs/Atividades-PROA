@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+        Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+    </p>
+
+
+    <script>
+        for (let index = 10; index > 0; index--) {
+            document.write(`${index}, `);
+
+            if (index == 1) {
+                document.write(`${index}.`);
+            }
+        }
+    </script>
+</body>
+
+</html>

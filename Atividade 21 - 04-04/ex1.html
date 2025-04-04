@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.</p>
+
+    <div class="result"></div>
+
+    <script>
+        const resultado = document.querySelector(".result");
+
+        const valorUm = Number(prompt("Digite o primeiro valor: "));
+        let valorDois = Number(prompt("Digite o segundo valor: "));
+
+        if (valorDois <= 0) {
+            valorDois = Number(prompt("Digite um valor maior do que zero: "));
+        }
+
+        const divisaoDosNumeros = valorUm / valorDois;
+
+        resultado.innerHTML = `
+            <p>O resultada da divisão de ${valorUm} e ${valorDois} é: <b>${divisaoDosNumeros}</b></p>
+        `;
+        
+
+        
+    </script>
+</body>
+</html>

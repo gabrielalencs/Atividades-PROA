@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse
+        aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um
+        novo valor ao usuário.
+    </p>
+
+
+    <script>
+
+        let nota1 = Number(prompt("Digite a primeira nota: "));
+        while (nota1 < 0 || nota1 > 10 || isNaN(nota1)) {
+            nota1 = Number(prompt("Primeira nota inválida. Digite novamente: "));
+        }
+
+        let nota2 = Number(prompt("Digite a segunda nota: "));
+        while (nota2 < 0 || nota2 > 10 || isNaN(nota2)) {
+            nota2 = Number(prompt("Segunda nota inválida. Digite novamente: "));
+        }
+
+        let nota3 = Number(prompt("Digite a terceira nota: "));
+        while (nota3 < 0 || nota3 > 10 || isNaN(nota3)) {
+            nota3 = Number(prompt("Terceira nota inválida. Digite novamente: "));
+        }
+
+        let nota4 = Number(prompt("Digite a quarta nota: "));
+        while (nota4 < 0 || nota4 > 10 || isNaN(nota4)) {
+            nota4 = Number(prompt("Quarta nota inválida. Digite novamente: "));
+        }
+
+        let nota5 = Number(prompt("Digite a quinta nota: "));
+        while (nota5 < 0 || nota5 > 10 || isNaN(nota5)) {
+            nota5 = Number(prompt("Quinta nota inválida. Digite novamente: "));
+        }
+
+        let nota6 = Number(prompt("Digite a sexta nota: "));
+        while (nota6 < 0 || nota6 > 10 || isNaN(nota6)) {
+            nota6 = Number(prompt("Sexta nota inválida. Digite novamente: "));
+        }
+
+        let media = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6) / 6;
+        alert("Média final: " + media);
+
+
+
+    </script>
+</body>
+
+</html>

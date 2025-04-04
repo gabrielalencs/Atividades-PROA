@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100
+        (inclusive).
+    </p>
+
+
+    <script>
+        let mediaTotal;
+        let somaDosNumeros = 0;
+        const quantidadeNumeros = 100 - 15 + 1; 
+
+        for (let index = 15; index <= 100; index++) {
+            somaDosNumeros += index;
+        }
+
+        mediaTotal = (somaDosNumeros / quantidadeNumeros).toFixed(2);
+
+   
+        alert("Média: " + mediaTotal);
+
+
+    </script>
+</body>
+
+</html>
